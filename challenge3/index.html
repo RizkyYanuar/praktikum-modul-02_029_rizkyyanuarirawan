@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Data Loader</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>💡 Tips Belajar Programming</h2>
+        
+        <div class="card">
+            <p id="state-initial">Tekan tombol di bawah untuk memuat tips secara acak.</p>
+            
+            <p id="state-loading" class="hidden">⏳ Memuat data secara asinkron...</p>
+            
+            <div id="state-success" class="hidden">
+                <blockquote id="quote-text"></blockquote>
+            </div>
+            
+            <div id="state-error" class="hidden error-box">
+                <p><strong>Gagal Memuat:</strong> <span id="error-message"></span></p>
+            </div>
+
+            <div id="state-empty" class="hidden empty-box">
+                <p>Data tidak ditemukan atau JSON kosong.</p>
+            </div>
+        </div>
+
+        <div class="action-area">
+            <button id="btn-load">Muat Data</button>
+            <button id="btn-retry" class="hidden">Coba Lagi</button>
+        </div>
+    </div>
+</body>
+</html>

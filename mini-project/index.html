@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RizkyDev - Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">RizkyDev.</div>
+        
+        <button id="btn-theme" class="btn-icon" aria-label="Ganti Tema">Gelap</button>
+        
+        <button id="btn-mobile-menu" aria-expanded="false" aria-controls="nav-menu">
+            ☰
+        </button>
+
+        <nav id="nav-menu" class="nav-links">
+            <a href="#beranda">Beranda</a>
+            <a href="#portofolio">Portofolio</a>
+            <a href="#faq">FAQ</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="beranda" class="hero">
+            <h1>Halo, Saya Rizky Yanuar Irawan</h1>
+            <p>Mahasiswa Teknik Komputer yang berfokus pada pengembangan website, arsitektur perangkat lunak, dan pemrograman.</p>
+        </section>
+
+        <section id="portofolio" class="section">
+            <h2>Proyek & Layanan</h2>
+            
+            <div id="filter-container" class="filter-group">
+                <button class="btn-filter active" data-filter="Semua">Semua</button>
+                <button class="btn-filter" data-filter="Web">Web</button>
+                <button class="btn-filter" data-filter="Aplikasi">Aplikasi</button>
+            </div>
+
+            <div id="project-grid" class="grid-container">
+            </div>
+            <div id="empty-state" class="hidden">Tidak ada proyek pada kategori ini.</div>
+        </section>
+
+        <section id="faq" class="section">
+            <h2>FAQ (Pertanyaan Umum)</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">Bahasa pemrograman apa saja yang Anda kuasai?</button>
+                    <div class="accordion-content">
+                        <p>Saya menggunakan JavaScript/Next.js untuk web, serta C dan C++ untuk aplikasi sistem dan manajemen.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">Apakah Anda menerima layanan pembuatan web?</button>
+                    <div class="accordion-content">
+                        <p>Ya, saya menerima pembuatan web responsif dan interaktif untuk kebutuhan instansi atau UMKM.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="section">
+            <h2>Hubungi Saya</h2>
+            <div id="form-container">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" name="name">
+                        <small class="error-msg" id="err-name"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email">
+                        <small class="error-msg" id="err-email"></small>
+                    </div>
+                    <button type="submit" class="btn-primary">Kirim Pesan</button>
+                </form>
+            </div>
+            <div id="success-message" class="hidden success-box">
+                <h3 id="success-title"></h3>
+                <p>Pesan Anda telah berhasil kami terima. Kami akan segera menghubungi Anda kembali.</p>
+                <button id="btn-reset" class="btn-primary">Kirim Pesan Lain</button>
+            </div>
+        </section>
+    </main>
+
+    <button id="btn-back-to-top" class="hidden" aria-label="Kembali ke atas">⬆</button>
+</body>
+</html>
